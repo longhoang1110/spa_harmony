@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;ioc-container&apos; to &apos;ioc-container-xml&apos;&#x0D;&#x0A;- Original element: &apos;ioc-container&apos;&#x0D;&#x0A;- Renamed element: &apos;ioc-container&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;ioc-container&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=ioc-container" name="ioc-container-xml" references="true" stamp="1713239217286" version="1.0"/>
+</session>

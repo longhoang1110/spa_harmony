@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;home.configuration.MovieConfiguration&apos; to &apos;MovieConfig&apos;&#x0D;&#x0A;- Original project: &apos;ioc-container-annotation&apos;&#x0D;&#x0A;- Original element: &apos;home.configuration.MovieConfiguration&apos;&#x0D;&#x0A;- Renamed element: &apos;home.configuration.MovieConfig&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MovieConfiguration&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;home.configuration{MovieConfiguration.java[MovieConfiguration" matchStrategy="1" name="MovieConfig" qualified="false" references="true" similarDeclarations="false" stamp="1713266869468" textual="false" version="1.0"/>
+</session>
