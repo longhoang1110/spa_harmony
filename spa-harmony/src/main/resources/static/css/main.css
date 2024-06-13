@@ -1,0 +1,23 @@
+.bg-light-header{
+	background-color: #f7d68e;
+	height: 70px !important;
+}
+
+.nav-link-user{
+	color: var(--black-color);
+	background-color: var(--white-color);
+	border: none;
+}
+
+.nav-link-user:hover{
+	color: var(--black-color) !important;
+
+}
+
+.navbar-brand{
+	font-size: 24px;
+}
+
+.nav-link-header{
+	color: white;
+}

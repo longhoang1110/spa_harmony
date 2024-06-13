@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<head th:replace="fragments :: page_head('Harmony', 'none')" />
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light-header">
+		<div class="container">
+			<a class="navbar-brand" href="#">Harmony Spa</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link nav-link-header" aria-current="page" href="#">Trang chủ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-link-header" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-link-header" href="#">Services</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-link-header" href="#">Contact</a>
+					</li>
+					<!-- Dropdown Menu -->
+					<li class="nav-item dropdown">
+						<a class="nav-link nav-link-header dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							More
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link nav-link-user" href="/login">Đăng nhập</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-link-user" href="/register">Đăng ký</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+
+</body>
+
+</html>

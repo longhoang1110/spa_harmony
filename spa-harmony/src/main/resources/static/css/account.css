@@ -1,0 +1,12 @@
+body {
+	background-color: #e5bf87;
+}
+
+.col-md-6 {
+	width: 28%;
+}
+
+.card-header-title {
+	text-align: center;
+	font-size: 25px;
+}

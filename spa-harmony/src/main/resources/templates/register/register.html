@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+
+	<head th:replace="fragments :: page_head('Login', 'none')" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/account.css}" />
+	<style>
+		.error {
+			color: red;
+		}
+
+		.register-login {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+
+		.nav-link-user {
+			padding-left: 3px;
+			color: red;
+		}
+
+		.text-register-login {
+			color: gray;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container mt-5">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<div class="card">
+					<div class="card-header card-header-title">Harmony Spa</div>
+					<div class="card-body">
+						<form id="registrationForm" th:action="@{/register}" th:object="${customer}" method="post">
+							<fieldset>
+								<div class="mb-3">
+									<label for="name" class="form-label">Họ và tên</label>
+									<input type="text" class="form-control" id="name" th:field="*{name}" />
+									<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error"></div>
+								</div>
+								<div class="mb-3">
+									<label for="phoneNumber" class="form-label">Số điện thoại</label>
+									<input type="text" class="form-control" id="phoneNumber" th:field="*{phone}" />
+									<div th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" class="error"></div>
+								</div>
+								<div class="mb-3">
+									<label for="email" class="form-label">Email</label>
+									<input type="text" class="form-control" id="email" th:field="*{email}" />
+									<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
+								</div>
+							</fieldset>
+
+							<fieldset th:object="${user}">
+								<div class="mb-3">
+									<label for="username" class="form-label">Tên đăng nhập</label>
+									<input type="text" class="form-control" id="username" th:field="*{username}" />
+									<div th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="error">
+									</div>
+								</div>
+								<div class="mb-3">
+									<label for="password" class="form-label">Mật khẩu</label>
+									<input type="password" class="form-control" id="password" th:field="*{password}" />
+									<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error">
+									</div>
+								</div>
+								<div class="mb-3">
+									<label for="confirmPassword" class="form-label">Nhập lại mật khẩu</label>
+									<input type="password" class="form-control" id="confirmPassword"
+										th:field="*{confirmPassword}" />
+									<div class="error" th:if="${#fields.hasErrors('confirmPassword')}"
+										th:errors="*{confirmPassword}"></div>
+									<span id="message" th:text="${error}"></span>
+								</div>
+							</fieldset>
+							<div class="d-grid justify-content-center">
+								<button type="submit" class="btn btn-primary">Đăng ký</button>
+								<div class="register-login d-flex justify-content-center">
+									<span class="text-register-login">"Đã có tài khoản"</span>
+									<a class="nav-link nav-link-user" href="/login">Đăng nhập</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

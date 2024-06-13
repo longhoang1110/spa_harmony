@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<head th:replace="fragments :: page_head('Login', 'none')" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/account.css}" />
+	<style>
+		.nav-link-forgot-password:hover{
+			text-decoration: underline;
+		}
+		.message{
+			color: green;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header card-header-title">Harmony Spa</div>
+                <div class="card-body">
+                    <form th:action="@{/login}" method="post">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Tên đăng nhập</label>
+                            <input type="text" class="form-control" id="username" name="username">
+                        </div>
+						
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="password" name="password">
+                        </div>                       						
+						<div class="d-flex flex-column justify-content-center align-items-center">
+						    <button type="submit" class="btn btn-primary w-50">Đăng nhập</button>
+							<a class="nav-link nav-link-forgot-password" href="/forgot_password">Quên mật khẩu</a>
+							<a class="nav-link nav-link-register" href="/register">Đăng ký</a>
+						</div>
+						<div th:if="${successMessage}" class="message">
+						        <p th:text="${successMessage}"></p>
+						    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
